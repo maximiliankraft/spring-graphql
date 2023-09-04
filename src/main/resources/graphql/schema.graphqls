@@ -1,0 +1,36 @@
+# https://www.apollographql.com/docs/kotlin/essentials/file-types/
+# https://www.apollographql.com/docs/kotlin/essentials/queries
+# https://www.apollographql.com/docs/kotlin/essentials/mutations/
+
+
+
+type Query {
+    schools: [School]
+    school(id: ID!): School
+    students: [Student]
+    student(id: ID!): Student
+    schoolClasses: [SchoolClass]
+    schoolClass(id: ID!): SchoolClass
+}
+
+type School {
+    id: ID!
+    name: String!
+    location: String!
+    schoolClasses: [SchoolClass]
+}
+
+type Student {
+    id: ID!
+    name: String!
+    schoolClass: SchoolClass
+}
+
+type SchoolClass {
+    id: ID!
+    name: String!
+    teacher: String!
+    students: [Student]
+}
+
+# todo add mutations

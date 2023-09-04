@@ -1,0 +1,11 @@
+### example graphql request
+#### see network analysis of http://localhost:8080/graphiql?path=/graphql
+POST http://localhost:8080/graphql
+Content-Type: application/json
+
+{"query": "query {students{id name schoolClass{name}}}"}
+
+
+
+
+
